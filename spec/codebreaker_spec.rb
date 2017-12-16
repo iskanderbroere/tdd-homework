@@ -157,8 +157,8 @@ RSpec.describe Codebreaker do
 
       it "1 exact match, 1 number match and 1 exact match (in that order) sends a mark with '++-'" do
         game.start(secret_number)
-        input = '5670'
-        expect(output).to receive(:puts).with('++-')
+        input = '5760'
+        expect(output).to receive(:puts).with('+--')
 
         game.guess(input)
       end
