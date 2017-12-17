@@ -47,8 +47,7 @@ class Codebreaker
     end
 
     def compare_number_only
-      match = @input & @secret_number
-      match.each { @result << '-' }
+      (@input & @secret_number).each { @result << '-' }
     end
 
     def puts_result
