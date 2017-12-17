@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(File.expand_path('../../app', __FILE__))
 require 'codebreaker'
 
 game = Codebreaker::Game.new(STDOUT)
-secret_number = '4321'
+secret_number = '1234'
 game.start(secret_number)
 
 while (guess = gets.chomp)
