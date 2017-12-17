@@ -11,10 +11,14 @@ class Codebreaker
       input.each_char.map(&:to_i)
     end
 
-    def start(secret_number)
-      @secret_number = to_array(secret_number)
+    def welcome
       output.puts 'Welcome to Codebreaker'
       output.puts 'Enter guess:'
+    end
+
+    def start(secret_number)
+      @secret_number = to_array(secret_number)
+      welcome
     end
 
     def guess(input)
