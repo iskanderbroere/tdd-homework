@@ -31,7 +31,7 @@ class Codebreaker
     def run_if_valid_else
       if valid
         compare_exact
-        compare_number_only
+        compare_match_only
       else
         output.puts 'Try guessing a number with four digits'
       end
@@ -50,7 +50,7 @@ class Codebreaker
       end
     end
 
-    def compare_number_only
+    def compare_match_only
       (@input & @secret_number).each { @result << '-' }
     end
 
