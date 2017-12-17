@@ -4,7 +4,6 @@ class Codebreaker
 
     def initialize(output)
       @output = output
-      @input = []
       @result = ''
     end
 
@@ -20,14 +19,15 @@ class Codebreaker
 
     def guess(input)
       @input = to_array(input)
-      run_if_valid
+      run_if_valid_else
+      puts_result
+      clear_result
     end
 
-    def run_if_valid
+    def run_if_valid_else
       if valid
         compare_exact
         compare_number_only
-        puts_result
       else
         output.puts 'Try guessing a number with four digits'
       end
@@ -53,6 +53,9 @@ class Codebreaker
 
     def puts_result
       output.puts @result
+    end
+
+    def clear_result
       @result.clear
     end
   end
